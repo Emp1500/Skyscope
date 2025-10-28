@@ -1,0 +1,141 @@
+:root {
+  --primary-color: #667eea;
+  --secondary-color: #bca2d6;
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+  background-image: linear-gradient(to right, #667eea, #764ba2);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
+
+.weather-card {
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.weather-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.weather-card .card-body {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.weather-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.page-title {
+  color: #fff;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  .temperature {
+    font-size: 3rem;
+  }
+}
+
+.city-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.temperature {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #eee;
+  font-size: 1.1rem;
+  margin-bottom: auto;
+  padding-bottom: 20px;
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #eee;
+  margin-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  padding-top: 15px;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.detail-item {
+  flex: 1;
+  text-align: center;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #eee;
+  display: block;
+  margin-bottom: 3px;
+  font-size: 0.8rem;
+}
+
+.detail-value {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.spinner-border {
+  width: 3.5rem;
+  height: 3.5rem;
+}
