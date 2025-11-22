@@ -9,7 +9,7 @@ const { getAllCities, cacheWeatherData, getCachedWeather, logWeatherView } = req
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('../frontend'));
 
 const WEATHER_API_URL = 'https://api.open-meteo.com/v1/forecast';
 
