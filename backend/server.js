@@ -7,7 +7,10 @@ const app = express();
 const { getAllCities, cacheWeatherData, getCachedWeather, logWeatherView } = require('./queries');
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://skyscope-siya.vercel.app',
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.static('../frontend'));
 
