@@ -1,5 +1,10 @@
 # Dependencies
-/node_modules
+**/node_modules
 
-# Environment variables
-.env
+# Environment variables - IMPORTANT
+**/.env*
+*.env
+
+# Log files
+*.log
+npm-debug.log*

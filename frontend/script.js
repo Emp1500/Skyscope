@@ -83,3 +83,25 @@ async function fetchWeather() {
 
 // Initial load
 fetchWeather();
+
+// Function to display current date
+function displayCurrentDate() {
+  const dateElement = document.getElementById('current-date');
+  if (dateElement) {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    dateElement.textContent = now.toLocaleDateString('en-US', options);
+  }
+}
+
+// Display the current date on load
+displayCurrentDate();
+
+// About Modal
+const aboutLink = document.getElementById('about-link');
+const aboutModal = new bootstrap.Modal(document.getElementById('aboutModal'));
+
+aboutLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  aboutModal.show();
+});

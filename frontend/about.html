@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center">
+                    <img src="images/temp.png" alt="Weather App Logo" class="header-logo">
+                    <h1 class="header-title">Skyscope</h1>
+                </div>
+                <div class="d-flex align-items-center">
+                    <p id="current-date" class="current-date"></p>
+                    <a href="index.html" class="ms-3 about-link">Home</a>
+                    <a href="about.html" id="about-link" class="ms-3 about-link">About</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="mb-4">About the Weather API Project</h1>
+        <p class="lead">This project is a web-based weather application that displays the current weather conditions for a predefined list of major cities around the world.</p>
+
+        <h2 class="mt-5">Key Features:</h2>
+        <ul>
+            <li><strong>Global Weather Dashboard:</strong> Displays weather cards for multiple cities simultaneously.</li>
+            <li><strong>Real-time Data:</strong> Fetches up-to-date weather information from the Open-Meteo API.</li>
+            <li><strong>Visually Appealing UI:</strong> The user interface is styled with custom CSS and Bootstrap, providing a clean and modern look.</li>
+        </ul>
+
+        <h2 class="mt-5">Technologies Used:</h2>
+        <h3>Backend:</h3>
+        <ul>
+            <li><strong>Node.js:</strong> A JavaScript runtime environment for building the server-side application.</li>
+            <li><strong>Express.js:</strong> A web application framework for Node.js, used to create the API endpoints.</li>
+            <li><strong>Axios:</strong> A promise-based HTTP client for making requests to the Open-Meteo API.</li>
+            <li><strong>dotenv:</strong> A module to load environment variables from a <code>.env</code> file.</li>
+            <li><strong>cors:</strong> A Node.js package for providing a Connect/Express middleware that can be used to enable CORS with various options.</li>
+        </ul>
+        <h3>Frontend:</h3>
+        <ul>
+            <li><strong>HTML, CSS, JavaScript:</strong> The core technologies for building the user interface.</li>
+            <li><strong>Bootstrap:</strong> A popular CSS framework for creating responsive and mobile-first websites.</li>
+            <li><strong>Axios:</strong> Used on the client-side to fetch data from the backend API.</li>
+        </ul>
+
+        <h2 class="mt-5">Architecture:</h2>
+        <p>The application follows a simple client-server architecture:</p>
+        <ol>
+            <li><strong>Frontend:</strong> The <code>public</code> directory contains the static frontend files (<code>index.html</code>, <code>style.css</code>, <code>script.js</code>). The JavaScript code makes an API call to the backend to fetch the weather data.</li>
+            <li><strong>Backend:</strong> The <code>server.js</code> file sets up an Express server with a single API endpoint (<code>/api/weather</code>). This endpoint fetches weather data from the Open-Meteo API for a list of hardcoded cities and returns it to the frontend.</li>
+        </ol>
+
+        <h2 class="mt-5">Creator Section</h2>
+        <div class="card mt-3">
+            <div class="card-body">
+                <h5 class="card-title">Project Creator</h5>
+                <p class="card-text">This project was created by <strong>Vedant Wagh</strong> as a demonstration of building a full-stack web application with Node.js, Express, and a modern frontend.</p>
+                <p class="card-text">Feel free to explore the code and contribute!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <p>&copy; 2025 Skyscope. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/Emp1500" target="_blank" class="footer-link">View Source</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.0/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
