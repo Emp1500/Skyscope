@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/weather';
+const API_URL = 'https://skyscope-virid.vercel.app/api/weather';
 const container = document.getElementById('weather-container');
 const loadingDiv = document.getElementById('loading');
 const errorDiv = document.getElementById('error');
