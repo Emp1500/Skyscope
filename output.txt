@@ -1,0 +1,17 @@
+I have successfully updated the CORS configuration in `backend/server.js` to explicitly allow requests from your frontend URL (`https://skyscope-siya.vercel.app/`) and enable credentials.
+
+**Now, you must perform these crucial steps:**
+
+1.  **Commit and Push this change to GitHub:**
+    ```bash
+    git add backend/server.js
+    git commit -m "fix(backend): Configure CORS for frontend origin"
+    git push
+    ```
+2.  **Redeploy your Backend Project on Vercel:**
+    *   Go to your [Vercel dashboard](https://vercel.com/dashboard).
+    *   Select your **backend** project (`skyscope-virid`).
+    *   Go to the **Deployments** tab.
+    *   Click on the three dots (...) next to the latest deployment and select **Redeploy**.
+
+Once your backend project has redeployed successfully, your frontend should now be able to fetch weather data without CORS issues. Please let me know if this resolves the problem!
